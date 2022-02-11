@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 650,
+          "bottomRow": 640,
           "containerStyle": "none",
           "snapRows": 121,
           "parentRowSpace": 1,
@@ -47,9 +47,6 @@
               "dynamicTriggerPathList": [],
               "dynamicBindingPathList": [
                 {
-                  "key": "primaryColumns.interviewer_name.displayText"
-                },
-                {
                   "key": "primaryColumns.interviewer_name.computedValue"
                 }
               ],
@@ -70,9 +67,7 @@
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "Interviewer Name",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( 'John'))}}",
-                  "displayText": "{{Table1.sanitizedTableData.map((currentRow) => ( 'John'))}}",
-                  "fontStyle": ""
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.interviewer_name))}}"
                 }
               },
               "delimiter": ",",
@@ -81,7 +76,7 @@
               "rightColumn": 28,
               "textSize": "PARAGRAPH",
               "widgetId": "7s6x6jo44x",
-              "isVisibleFilters": true,
+              "isVisibleFilters": false,
               "tableData": "[{\"interviewer_name\": \"John\"}]",
               "isVisible": true,
               "label": "Data",
@@ -191,7 +186,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Table1.selectedRow.interviewer_name}}'s Details",
+                      "text": "{{Table1.selectedRow.interviewer_name || Table1.}}'s Details",
                       "key": "icqf9wdl6e",
                       "rightColumn": 62,
                       "textAlign": "CENTER",
@@ -666,7 +661,7 @@
             },
             {
               "widgetName": "Button1",
-              "onClick": "{{showModal('Register_Modal')}}",
+              "onClick": "{{showModal('Modal1')}}",
               "buttonColor": "#2E3D49",
               "displayName": "Button",
               "iconSVG": "/static/media/icon.cca02633.svg",
@@ -682,7 +677,7 @@
                   "key": "onClick"
                 }
               ],
-              "leftColumn": 1,
+              "leftColumn": 15,
               "dynamicBindingPathList": [],
               "text": "Register Interviewer",
               "isDisabled": false,
@@ -718,13 +713,13 @@
                   "widgetName": "Canvas5",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 570,
+                  "bottomRow": 460,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 580,
+                  "minHeight": 462,
                   "parentColumnSpace": 1,
                   "dynamicTriggerPathList": [],
                   "leftColumn": 0,
@@ -894,10 +889,12 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 6.408203125,
+                              "dynamicTriggerPathList": [],
                               "resetOnSubmit": true,
                               "leftColumn": 16,
+                              "dynamicBindingPathList": [],
                               "labelStyle": "",
-                              "inputType": "TEXT",
+                              "inputType": "EMAIL",
                               "isDisabled": false,
                               "key": "de5amytgpd",
                               "isRequired": false,
@@ -1206,7 +1203,7 @@
                 }
               ],
               "key": "kekpanwzxj",
-              "height": 580,
+              "height": 462,
               "rightColumn": 29,
               "detachFromLayout": true,
               "widgetId": "4ujvb3cwm0",

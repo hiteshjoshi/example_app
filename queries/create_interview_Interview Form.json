@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "get_interviewers",
+    "name": "create_interview",
     "datasource": {
       "pluginId": "mongo-plugin",
       "messages": [],
@@ -12,14 +12,17 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Interviewer Pool",
+    "pageId": "Interview Form",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "formData": {
-        "collection": "interviewers",
-        "command": "FIND"
+        "command": "INSERT",
+        "collection": "interviews",
+        "insert": {
+          "documents": "{ candid }"
+        }
       }
     },
     "executeOnLoad": false,
@@ -33,7 +36,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Interviewer Pool_get_interviewers",
+  "id": "Interview Form_create_interview",
   "deleted": false,
-  "gitSyncId": "620648da6b4b1e154a3be216_620658116b4b1e154a3be3e7"
+  "gitSyncId": "620648da6b4b1e154a3be216_620657e56b4b1e154a3be3d7"
 }

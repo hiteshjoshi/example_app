@@ -93,7 +93,7 @@
                       "buttonVariant": "PRIMARY"
                     },
                     {
-                      "widgetName": "Input1Copy1",
+                      "widgetName": "CreateCName",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
                       "topRow": 6,
@@ -125,7 +125,7 @@
                       "defaultText": ""
                     },
                     {
-                      "widgetName": "Input1CopyCopy1",
+                      "widgetName": "CreateCEmail",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
                       "topRow": 13,
@@ -157,7 +157,7 @@
                       "defaultText": ""
                     },
                     {
-                      "widgetName": "Input1CopyCopyCopy1",
+                      "widgetName": "CreateCPhone",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
                       "topRow": 20,
@@ -189,7 +189,7 @@
                       "defaultText": ""
                     },
                     {
-                      "widgetName": "Input1CopyCopyCopyCopy",
+                      "widgetName": "CreateCUrl",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
                       "topRow": 27,
@@ -221,7 +221,7 @@
                       "defaultText": ""
                     },
                     {
-                      "widgetName": "Select1Copy1",
+                      "widgetName": "CreateCRole",
                       "isFilterable": false,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba.svg",
@@ -232,29 +232,17 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": {
-                        "label": "Green",
-                        "value": "GREEN"
-                      },
+                      "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 8.4365234375,
                       "dynamicTriggerPathList": [],
                       "leftColumn": 0,
-                      "dynamicBindingPathList": [],
-                      "options": [
+                      "dynamicBindingPathList": [
                         {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
+                          "key": "options"
                         }
                       ],
+                      "options": "{{JSObject1.roles.map(role => ({ label: role.name, value: role.name }))}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "yk6zj1fb5p",
@@ -840,7 +828,7 @@
                       "isCanvas": true,
                       "displayName": "Tabs",
                       "iconSVG": "/static/media/icon.74a6d653.svg",
-                      "topRow": 1,
+                      "topRow": 0,
                       "bottomRow": 78,
                       "parentRowSpace": 10,
                       "type": "TABS_WIDGET",
@@ -857,7 +845,7 @@
                           "widgetName": "Canvas2",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 700,
+                          "bottomRow": 730,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": true,
@@ -1157,7 +1145,7 @@
                               "isDisabled": false,
                               "key": "ar6q14pm2s",
                               "isRequired": false,
-                              "rightColumn": 21,
+                              "rightColumn": 19,
                               "isDefaultClickDisabled": true,
                               "widgetId": "ve48n1lr49",
                               "isVisible": true,
@@ -1209,17 +1197,17 @@
                               "buttonColor": "#2E3D49",
                               "displayName": "FormButton",
                               "iconSVG": "/static/media/icon.c8f649ed.svg",
-                              "topRow": 64,
-                              "bottomRow": 68,
+                              "topRow": 65,
+                              "bottomRow": 71,
                               "type": "FORM_BUTTON_WIDGET",
                               "hideCard": true,
                               "animateLoading": true,
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 30,
+                              "leftColumn": 0,
                               "dynamicBindingPathList": [],
                               "text": "Reset",
                               "key": "ojngkr29xm",
-                              "rightColumn": 46,
+                              "rightColumn": 32,
                               "isDefaultClickDisabled": true,
                               "widgetId": "58xmi1s5p0",
                               "isVisible": true,
@@ -1229,7 +1217,8 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "disabledWhenInvalid": false,
-                              "buttonVariant": "TERTIARY"
+                              "borderRadius": "ROUNDED",
+                              "buttonVariant": "SECONDARY"
                             },
                             {
                               "resetFormOnClick": true,
@@ -1237,13 +1226,13 @@
                               "buttonColor": "#FBF4EB",
                               "displayName": "FormButton",
                               "iconSVG": "/static/media/icon.c8f649ed.svg",
-                              "topRow": 64,
-                              "bottomRow": 68,
+                              "topRow": 65,
+                              "bottomRow": 71,
                               "type": "FORM_BUTTON_WIDGET",
                               "hideCard": true,
                               "animateLoading": true,
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 47,
+                              "leftColumn": 33,
                               "dynamicBindingPathList": [],
                               "text": "Submit",
                               "key": "ojngkr29xm",
@@ -1257,6 +1246,7 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "disabledWhenInvalid": true,
+                              "borderRadius": "ROUNDED",
                               "buttonVariant": "PRIMARY"
                             }
                           ],
@@ -1467,6 +1457,11 @@
           "Container1",
           "Container2",
           "Container3",
+          "CreateCEmail",
+          "CreateCName",
+          "CreateCPhone",
+          "CreateCRole",
+          "CreateCUrl",
           "Create_Candidate",
           "FilePicker1",
           "FormButton1",
@@ -1477,16 +1472,11 @@
           "Image2",
           "Input1",
           "Input1Copy",
-          "Input1Copy1",
           "Input1CopyCopy",
-          "Input1CopyCopy1",
           "Input1CopyCopyCopy",
-          "Input1CopyCopyCopy1",
-          "Input1CopyCopyCopyCopy",
           "MainContainer",
           "Select1",
           "Select1Copy",
-          "Select1Copy1",
           "Select1CopyCopy",
           "Select2",
           "Table1",

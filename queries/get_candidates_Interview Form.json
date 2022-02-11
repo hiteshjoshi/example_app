@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "create_interviewer",
+    "name": "get_candidates",
     "datasource": {
       "pluginId": "mongo-plugin",
       "messages": [],
@@ -18,8 +18,7 @@
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "formData": {
-        "command": "INSERT",
-        "collection": "interviewers"
+        "collection": "candidates"
       }
     },
     "executeOnLoad": false,
@@ -33,7 +32,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Interview Form_create_interviewer",
+  "id": "Interview Form_get_candidates",
   "deleted": false,
-  "gitSyncId": "620648da6b4b1e154a3be216_620657e56b4b1e154a3be3d7"
+  "gitSyncId": "620648da6b4b1e154a3be216_62065b636b4b1e154a3be4af"
 }
