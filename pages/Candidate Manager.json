@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1160,
+          "rightColumn": 1280,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -1214,11 +1214,16 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 8.154296875,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onFilesSelected"
+                                }
+                              ],
                               "leftColumn": 43,
                               "dynamicBindingPathList": [],
                               "isDisabled": false,
                               "key": "ar6q14pm2s",
+                              "onFilesSelected": "{{upload_resume.run(() => showAlert('File uploaded','success'), () => showAlert('Error uploading file','error'))}}",
                               "isRequired": false,
                               "rightColumn": 62,
                               "isDefaultClickDisabled": true,
