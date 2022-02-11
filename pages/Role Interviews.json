@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1160,
+          "rightColumn": 1280,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -629,8 +629,8 @@
                         "_id",
                         "migration",
                         "interview_rounds",
-                        "id",
-                        "role"
+                        "role",
+                        "id"
                       ],
                       "isVisibleDownload": true,
                       "dynamicPropertyPathList": [],
@@ -726,7 +726,7 @@
                           "textSize": "PARAGRAPH",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -816,7 +816,7 @@
                           "textSize": "PARAGRAPH",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
