@@ -936,7 +936,7 @@
                               "truncateButtonColor": "#FFC13D",
                               "text": "Edit Candidate",
                               "key": "y6c0ip2y2x",
-                              "rightColumn": 24,
+                              "rightColumn": 46,
                               "textAlign": "LEFT",
                               "widgetId": "xw2iwx2vbh",
                               "isVisible": true,
@@ -981,7 +981,7 @@
                               "fontSize": "PARAGRAPH"
                             },
                             {
-                              "widgetName": "Input1",
+                              "widgetName": "EditCName",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595.svg",
                               "topRow": 9,
@@ -1067,7 +1067,11 @@
                               "dynamicTriggerPathList": [],
                               "resetOnSubmit": true,
                               "leftColumn": 0,
-                              "dynamicBindingPathList": [],
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "defaultText"
+                                }
+                              ],
                               "labelStyle": "",
                               "inputType": "TEXT",
                               "isDisabled": false,
@@ -1082,7 +1086,7 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "iconAlign": "left",
-                              "defaultText": ""
+                              "defaultText": "{{Table1.selectedRow.phone}}"
                             },
                             {
                               "widgetName": "Input1CopyCopyCopy",
@@ -1099,7 +1103,11 @@
                               "dynamicTriggerPathList": [],
                               "resetOnSubmit": true,
                               "leftColumn": 0,
-                              "dynamicBindingPathList": [],
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "defaultText"
+                                }
+                              ],
                               "labelStyle": "",
                               "inputType": "TEXT",
                               "isDisabled": false,
@@ -1114,7 +1122,7 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "iconAlign": "left",
-                              "defaultText": ""
+                              "defaultText": "{{Table1.selectedRow.url}}"
                             },
                             {
                               "widgetName": "Select1",
@@ -1128,29 +1136,20 @@
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
-                              "defaultOptionValue": {
-                                "label": "Green",
-                                "value": "GREEN"
-                              },
+                              "defaultOptionValue": "{{ {\n\tlabel: Table1.selectedRow.role,\n\t\tvalue: Table1.selectedRow.role\n} }}",
                               "animateLoading": true,
                               "parentColumnSpace": 8.4365234375,
                               "dynamicTriggerPathList": [],
                               "leftColumn": 0,
-                              "dynamicBindingPathList": [],
-                              "options": [
+                              "dynamicBindingPathList": [
                                 {
-                                  "label": "Blue",
-                                  "value": "BLUE"
+                                  "key": "options"
                                 },
                                 {
-                                  "label": "Green",
-                                  "value": "GREEN"
-                                },
-                                {
-                                  "label": "Red",
-                                  "value": "RED"
+                                  "key": "defaultOptionValue"
                                 }
                               ],
+                              "options": "{{JSObject1.roles.map(role => ({ label: role.name, value: role.id }))}}",
                               "placeholderText": "Select option",
                               "isDisabled": false,
                               "key": "yk6zj1fb5p",
@@ -1175,13 +1174,17 @@
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
-                              "defaultOptionValue": "{\n    \"label\": \"New Applicant\",\n    \"value\": \"BLUE\"\n  }",
+                              "defaultOptionValue": "{{ {\n\tlabel: Table1.selectedRow.status,\n\t\tvalue: Table1.selectedRow.status\n} }}",
                               "animateLoading": true,
                               "parentColumnSpace": 8.4365234375,
                               "dynamicTriggerPathList": [],
                               "leftColumn": 0,
-                              "dynamicBindingPathList": [],
-                              "options": "[\n  {\n    \"label\": \"New Applicant\",\n    \"value\": \"BLUE\"\n  },\n  {\n    \"label\": \"Interview Process\",\n    \"value\": \"GREEN\"\n  },\n  {\n    \"label\": \"Hired\",\n    \"value\": \"RED\"\n  },\n\t{\n    \"label\": \"Rejected\",\n    \"value\": \"RED2\"\n  }\n]",
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "defaultOptionValue"
+                                }
+                              ],
+                              "options": "[\n  {\n    \"label\": \"New Applicant\",\n    \"value\": \"new\"\n  },\n  {\n    \"label\": \"Interview Process\",\n    \"value\": \"process\"\n  },\n  {\n    \"label\": \"Hired\",\n    \"value\": \"hired\"\n  },\n\t{\n    \"label\": \"Rejected\",\n    \"value\": \"rejected\"\n  }\n]",
                               "placeholderText": "Select option",
                               "isDisabled": false,
                               "key": "yk6zj1fb5p",
@@ -1531,6 +1534,7 @@
           "CreateCStatus",
           "CreateCUrl",
           "Create_Candidate",
+          "EditCName",
           "FilePicker1",
           "FormButton1",
           "FormButton1Copy",
@@ -1538,7 +1542,6 @@
           "Icon1",
           "IconButton1",
           "Image2",
-          "Input1",
           "Input1Copy",
           "Input1CopyCopy",
           "Input1CopyCopyCopy",

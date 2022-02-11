@@ -21,7 +21,7 @@
         "command": "INSERT",
         "collection": "interviewers",
         "insert": {
-          "documents": "{{[{\"name\": Form1.data.Input5}]}}"
+          "documents": "{{[{\"name\": Form1.data.Input5.name}]}}"
         }
       }
     },
@@ -35,7 +35,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "[{\"name\": Form1.data.Input5}]"
+      "[{\"name\": Form1.data.Input5.name}]"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
