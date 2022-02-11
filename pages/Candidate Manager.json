@@ -61,7 +61,7 @@
                     {
                       "resetFormOnClick": true,
                       "widgetName": "FormButton1Copy",
-                      "onClick": "{{CreateCandidate.run(() => { get_candidates.run(); closeModal() }, () => closeModal())}}",
+                      "onClick": "{{CreateCandidate.run(() => { get_candidates.run(); closeModal(); }, () => closeModal())}}",
                       "buttonColor": "#FBF4EB",
                       "dynamicPropertyPathList": [
                         {

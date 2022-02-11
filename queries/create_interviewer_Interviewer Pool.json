@@ -21,7 +21,7 @@
         "command": "INSERT",
         "collection": "interviewers",
         "insert": {
-          "documents": "{\"name\": {{Input5.vaue}},\"email\": {{Form1.data.Input1.value}},\"phone\": Form1.data.PhoneInput1.value, \"designation\": Form1.data.Input2.value, \"calendly\": Form1.data.Input3.value, \"rounds\": Form1.data.Input4.value}"
+          "documents": "{\"name\": {{Input5.text}},\"email\": {{Input1.text}},\"phone\": {{PhoneInput1.text}}, \"designation\": {{Input2.text}}, \"calendly\": {{Input3.text}}, \"rounds\": {{Input4.text}}}"
         }
       }
     },
@@ -35,8 +35,12 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Form1.data.Input1.value",
-      "Input5.vaue"
+      "Input1.text",
+      "Input2.text",
+      "Input3.text",
+      "Input4.text",
+      "Input5.text",
+      "PhoneInput1.text"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

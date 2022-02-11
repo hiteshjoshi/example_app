@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 790,
+          "bottomRow": 1010,
           "containerStyle": "none",
           "snapRows": 121,
           "parentRowSpace": 1,
@@ -382,6 +382,167 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "15"
+            },
+            {
+              "widgetName": "Table1",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "feedback",
+                "additional_information",
+                "candidate",
+                "round",
+                "_id"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "topRow": 71,
+              "bottomRow": 99,
+              "isSortable": true,
+              "parentRowSpace": 10,
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 17.9375,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.feedback.computedValue"
+                },
+                {
+                  "key": "primaryColumns.additional_information.computedValue"
+                },
+                {
+                  "key": "primaryColumns.candidate.computedValue"
+                },
+                {
+                  "key": "primaryColumns.round.computedValue"
+                },
+                {
+                  "key": "primaryColumns._id.computedValue"
+                }
+              ],
+              "leftColumn": 1,
+              "primaryColumns": {
+                "feedback": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "feedback",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "feedback",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.feedback))}}"
+                },
+                "appsmith_mongo_escape_id": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "_id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "_id",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow._id))}}"
+                },
+                "additional_information": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "additional_information",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "additional_information",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.additional_information))}}"
+                },
+                "candidate": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "candidate",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "candidate",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.candidate))}}"
+                },
+                "round": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "round",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "round",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.round))}}"
+                }
+              },
+              "delimiter": ",",
+              "key": "9mdyfg2q5g",
+              "derivedColumns": {},
+              "rightColumn": 63,
+              "textSize": "PARAGRAPH",
+              "widgetId": "gy0yw840ae",
+              "isVisibleFilters": true,
+              "tableData": "{{get_interviews.data}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "enableClientSideSearch": true,
+              "version": 3,
+              "totalRecordsCount": 0,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75,
+                "candidate": 240,
+                "round": 276
+              }
             }
           ]
         },
@@ -394,6 +555,7 @@
           "FormButton1",
           "FormButton2",
           "MainContainer",
+          "Table1",
           "Text2",
           "Text8Copy",
           "additional_information",

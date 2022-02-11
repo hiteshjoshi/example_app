@@ -18,7 +18,8 @@
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "formData": {
-        "collection": "interviews"
+        "collection": "interviews",
+        "command": "FIND"
       }
     },
     "executeOnLoad": false,

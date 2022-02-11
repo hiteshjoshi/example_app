@@ -21,6 +21,9 @@
       "Table1",
       "Table2"
     ],
+    "Interview Form": [
+      "Table1"
+    ],
     "Candidate Manager": [
       "Table1"
     ]
@@ -29,6 +32,9 @@
     "Role Interviews": [
       "Table1",
       "Table2"
+    ],
+    "Interview Form": [
+      "Table1"
     ],
     "Candidate Manager": [
       "Table1"
