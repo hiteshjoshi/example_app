@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1168,
+          "rightColumn": 1160,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -368,8 +368,8 @@
               "dynamicPropertyPathList": [],
               "displayName": "Table",
               "iconSVG": "/static/media/icon.db8a9cbd.svg",
-              "topRow": 69,
-              "bottomRow": 106,
+              "topRow": 74,
+              "bottomRow": 111,
               "isSortable": true,
               "parentRowSpace": 10,
               "type": "TABLE_WIDGET",
@@ -418,7 +418,8 @@
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "_id",
-                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow._id))}}"
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow._id))}}",
+                  "cellBackground": "#FFFFFF"
                 },
                 "name": {
                   "index": 1,
@@ -435,7 +436,8 @@
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "name",
-                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.name))}}"
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.name))}}",
+                  "cellBackground": "#FFFFFF"
                 },
                 "migration": {
                   "index": 1,
@@ -452,7 +454,8 @@
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "migration",
-                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.migration))}}"
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.migration))}}",
+                  "cellBackground": "#FFFFFF"
                 },
                 "description": {
                   "index": 2,
@@ -469,7 +472,8 @@
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "description",
-                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.description))}}"
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.description))}}",
+                  "cellBackground": "#FFFFFF"
                 },
                 "id": {
                   "index": 4,
@@ -486,7 +490,8 @@
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "id",
-                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.id))}}"
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
+                  "cellBackground": "#FFFFFF"
                 },
                 "order": {
                   "index": 3,
@@ -503,13 +508,14 @@
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "order",
-                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.order))}}"
+                  "computedValue": "{{Table2.sanitizedTableData.map((currentRow) => ( currentRow.order))}}",
+                  "cellBackground": "#FFFFFF"
                 }
               },
               "delimiter": ",",
               "key": "4p0957sht1",
               "derivedColumns": {},
-              "rightColumn": 43,
+              "rightColumn": 64,
               "textSize": "PARAGRAPH",
               "widgetId": "47bht6uw3t",
               "isVisibleFilters": true,
@@ -526,6 +532,7 @@
               "horizontalAlignment": "LEFT",
               "isVisibleSearch": true,
               "isVisiblePagination": true,
+              "cellBackground": "#FFFFFF",
               "verticalAlignment": "CENTER",
               "columnSizeMap": {
                 "task": 245,
@@ -537,11 +544,11 @@
             },
             {
               "widgetName": "Text2",
-              "borderColor": "#2E3D49",
+              "borderColor": "",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b52.svg",
-              "topRow": 65,
-              "bottomRow": 69,
+              "topRow": 70,
+              "bottomRow": 74,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -556,7 +563,7 @@
               "text": "Interview Rounds in Order",
               "key": "h44njt8z1a",
               "rightColumn": 43,
-              "textAlign": "CENTER",
+              "textAlign": "LEFT",
               "widgetId": "wg6m9f8l70",
               "isVisible": true,
               "fontStyle": "BOLD",
@@ -566,7 +573,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "fontSize": "PARAGRAPH"
+              "fontSize": "HEADING3"
             },
             {
               "boxShadow": "NONE",
@@ -907,6 +914,33 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "0"
+            },
+            {
+              "widgetName": "Divider1",
+              "thickness": 2,
+              "displayName": "Divider",
+              "iconSVG": "/static/media/icon.cbe8f608.svg",
+              "topRow": 66,
+              "bottomRow": 70,
+              "parentRowSpace": 10,
+              "type": "DIVIDER_WIDGET",
+              "capType": "nc",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 17.9375,
+              "leftColumn": 1,
+              "key": "n9ptu5wr2b",
+              "dividerColor": "#EBEBEB",
+              "orientation": "horizontal",
+              "strokeStyle": "solid",
+              "rightColumn": 64,
+              "widgetId": "tgx3a62juo",
+              "capSide": 0,
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false
             }
           ]
         },
@@ -940,6 +974,7 @@
           "Canvas7",
           "Container2",
           "Container3",
+          "Divider1",
           "Form1",
           "FormButton1",
           "FormButton2",

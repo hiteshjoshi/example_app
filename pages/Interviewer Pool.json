@@ -759,7 +759,7 @@
                     },
                     {
                       "widgetName": "Button5",
-                      "onClick": "{{create_interviewer.run()}}",
+                      "onClick": "{{create_interviewer.run(() => showAlert('Interviewer registered successfully!','success'), () => showAlert('Something went wrong!','error'))}}",
                       "buttonColor": "#03B365",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca02633.svg",
@@ -1517,7 +1517,7 @@
     ],
     "userPermissions": [],
     "policies": [],
-    "isHidden": true
+    "isHidden": false
   },
   "deleted": false,
   "policies": [],

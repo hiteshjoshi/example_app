@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1160,
+          "rightColumn": 1280,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -20,7 +20,7 @@
           "type": "CANVAS_WIDGET",
           "canExtend": true,
           "version": 51,
-          "minHeight": 1292,
+          "minHeight": 1220,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
@@ -61,7 +61,7 @@
                     {
                       "resetFormOnClick": true,
                       "widgetName": "FormButton1Copy",
-                      "onClick": "{{CreateCandidate.run(() => get_candidates.run(), () => {})}}",
+                      "onClick": "{{CreateCandidate.run(() => get_candidates.run(), () => closeModal())}}",
                       "buttonColor": "#FBF4EB",
                       "displayName": "FormButton",
                       "iconSVG": "/static/media/icon.c8f649ed.svg",
