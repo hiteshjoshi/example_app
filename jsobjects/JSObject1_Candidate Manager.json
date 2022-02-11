@@ -1,0 +1,116 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Candidate Manager",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tcandidates: [\n\t\t\t{ id: 1, name: 'Ankur', email: 'ankur@test.com', phone_number: '1234567890', linkedin_url: 'https://www.linkedin.com/in/ankur-singhal-12991a163/',  },\n\t\t\t\t\t\t{ id: 2, name: 'Pawan', email: 'pawan@test.com', phone_number: '1234567890', linkedin_url: 'https://www.linkedin.com/in/ankur-singhal-12991a163/',  },\n\t\t\t\t\t\t{ id: 3, name: 'Hitesh', email: 'hitesh@test.com', phone_number: '1234567890', linkedin_url: 'https://www.linkedin.com/in/ankur-singhal-12991a163/',  },\n\t\t\t\t\t\t{ id: 4, name: 'Vivek', email: 'vivek@test.com', phone_number: '1234567890', linkedin_url: 'https://www.linkedin.com/in/ankur-singhal-12991a163/',  },\n\t\t],\n\trounds: [\n\t\t{ id: 1, name: 'Intro round', description: 'Get to know about the candidate and brief about the company.', order: 1 },\n\t\t{ id: 2, name: 'Technical Round 1', description: 'Test data strucutres and algo', order: 2 },\n\t\t{ id: 3, name: 'Technical Round 2', description: 'System Design.', order: 3 },\n\t\t{ id: 4, name: 'Cultural', description: 'Test whether the candidate fit into the companys culture', order: 4 },\n\t],\n\tinterviews: [\n\t\t{ id: 1, candidate_id: 1, round_id: 1, interviewer_feedback: 'very good candidate', additional_information: '' }\n\t],\n\t\troles: [\n\t\t{ id: 1, name: 'Software engineer', description: 'Software engineer level 1.', interview_rounds: [1,2,4] },\n\t\t{ id: 2, name: 'Senior Software engineer', description: 'Software engineer level 2.', interview_rounds: [1,2,3,4] },\n\t],\n\tgetCandidatesForSelect: () => {\n\t\treturn this.candidates.map(candidate => ({ label: candidate.name, value: candidate.id }))\n\t},\n\t\tgetRounds: () => {\n\t\t\treturn this.rounds.map(round => ({ label: round.name, value: round.id }))\n\t\t},\n\t\n\tgetRoundsForMongo: () => {\n\t\treturn this.rounds.map(round => ({ ...round, migration: 1 }))\n\t},\n\t\tgetRolesForMongo: () => {\n\t\treturn this.roles.map(role => ({ ...role, migration: 1 }))\n\t}\n}",
+    "variables": [
+      {
+        "name": "candidates",
+        "value": [
+          {
+            "id": 1,
+            "name": "Ankur",
+            "email": "ankur@test.com",
+            "phone_number": "1234567890",
+            "linkedin_url": "https://www.linkedin.com/in/ankur-singhal-12991a163/"
+          },
+          {
+            "id": 2,
+            "name": "Pawan",
+            "email": "pawan@test.com",
+            "phone_number": "1234567890",
+            "linkedin_url": "https://www.linkedin.com/in/ankur-singhal-12991a163/"
+          },
+          {
+            "id": 3,
+            "name": "Hitesh",
+            "email": "hitesh@test.com",
+            "phone_number": "1234567890",
+            "linkedin_url": "https://www.linkedin.com/in/ankur-singhal-12991a163/"
+          },
+          {
+            "id": 4,
+            "name": "Vivek",
+            "email": "vivek@test.com",
+            "phone_number": "1234567890",
+            "linkedin_url": "https://www.linkedin.com/in/ankur-singhal-12991a163/"
+          }
+        ]
+      },
+      {
+        "name": "rounds",
+        "value": [
+          {
+            "id": 1,
+            "name": "Intro round",
+            "description": "Get to know about the candidate and brief about the company.",
+            "order": 1
+          },
+          {
+            "id": 2,
+            "name": "Technical Round 1",
+            "description": "Test data strucutres and algo",
+            "order": 2
+          },
+          {
+            "id": 3,
+            "name": "Technical Round 2",
+            "description": "System Design.",
+            "order": 3
+          },
+          {
+            "id": 4,
+            "name": "Cultural",
+            "description": "Test whether the candidate fit into the companys culture",
+            "order": 4
+          }
+        ]
+      },
+      {
+        "name": "interviews",
+        "value": [
+          {
+            "id": 1,
+            "candidate_id": 1,
+            "round_id": 1,
+            "interviewer_feedback": "very good candidate",
+            "additional_information": ""
+          }
+        ]
+      },
+      {
+        "name": "roles",
+        "value": [
+          {
+            "id": 1,
+            "name": "Software engineer",
+            "description": "Software engineer level 1.",
+            "interview_rounds": [
+              1,
+              2,
+              4
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Senior Software engineer",
+            "description": "Software engineer level 2.",
+            "interview_rounds": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "id": "Candidate Manager_JSObject1",
+  "deleted": false,
+  "gitSyncId": "620648da6b4b1e154a3be216_6206580f6b4b1e154a3be3e5"
+}
