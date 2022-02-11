@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "EditCandidate",
+    "name": "get_interviews",
     "datasource": {
       "pluginId": "mongo-plugin",
       "messages": [],
@@ -12,14 +12,13 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Candidate Manager",
+    "pageId": "Interview Form",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "formData": {
-        "command": "UPDATE",
-        "collection": "candidates"
+        "collection": "interviews"
       }
     },
     "executeOnLoad": false,
@@ -33,7 +32,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Candidate Manager_EditCandidate",
+  "id": "Interview Form_get_interviews",
   "deleted": false,
-  "gitSyncId": "620648da6b4b1e154a3be216_62065fb26b4b1e154a3be686"
+  "gitSyncId": "620648da6b4b1e154a3be216_6206640c6b4b1e154a3be79c"
 }

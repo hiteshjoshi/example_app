@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1168,
+          "rightColumn": 1160,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -62,11 +62,11 @@
                       "resetFormOnClick": true,
                       "widgetName": "FormButton1Copy",
                       "onClick": "{{CreateCandidate.run(() => get_candidates.run(), () => {})}}",
-                      "buttonColor": "#03b365",
+                      "buttonColor": "#FBF4EB",
                       "displayName": "FormButton",
                       "iconSVG": "/static/media/icon.c8f649ed.svg",
-                      "topRow": 50,
-                      "bottomRow": 55,
+                      "topRow": 52,
+                      "bottomRow": 58,
                       "type": "FORM_BUTTON_WIDGET",
                       "hideCard": true,
                       "animateLoading": true,
@@ -836,7 +836,7 @@
               "borderWidth": "",
               "key": "jan7yj2jtr",
               "backgroundColor": "#FBF4EB",
-              "rightColumn": 62,
+              "rightColumn": 64,
               "widgetId": "7o85njvp1k",
               "containerStyle": "card",
               "isVisible": true,
@@ -1017,7 +1017,7 @@
                               "defaultText": "{{Table1.selectedRow.name}}"
                             },
                             {
-                              "widgetName": "Input1Copy",
+                              "widgetName": "EditCEmail",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595.svg",
                               "topRow": 16,
@@ -1053,7 +1053,7 @@
                               "defaultText": "{{Table1.selectedRow.email}}"
                             },
                             {
-                              "widgetName": "Input1CopyCopy",
+                              "widgetName": "EditCPhone",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595.svg",
                               "topRow": 23,
@@ -1089,7 +1089,7 @@
                               "defaultText": "{{Table1.selectedRow.phone}}"
                             },
                             {
-                              "widgetName": "Input1CopyCopyCopy",
+                              "widgetName": "EditCUrl",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595.svg",
                               "topRow": 30,
@@ -1125,7 +1125,7 @@
                               "defaultText": "{{Table1.selectedRow.url}}"
                             },
                             {
-                              "widgetName": "Select1",
+                              "widgetName": "EditCRole",
                               "isFilterable": false,
                               "displayName": "Select",
                               "iconSVG": "/static/media/icon.bd99caba.svg",
@@ -1163,7 +1163,7 @@
                               "isLoading": false
                             },
                             {
-                              "widgetName": "Select1Copy",
+                              "widgetName": "EditCStatus",
                               "isFilterable": false,
                               "displayName": "Select",
                               "iconSVG": "/static/media/icon.bd99caba.svg",
@@ -1293,6 +1293,7 @@
                             {
                               "resetFormOnClick": true,
                               "widgetName": "FormButton1",
+                              "onClick": "{{UpdateCandidate.run(() => get_candidates.run(), () => {})}}",
                               "buttonColor": "#FBF4EB",
                               "displayName": "FormButton",
                               "iconSVG": "/static/media/icon.c8f649ed.svg",
@@ -1301,7 +1302,11 @@
                               "type": "FORM_BUTTON_WIDGET",
                               "hideCard": true,
                               "animateLoading": true,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "leftColumn": 33,
                               "dynamicBindingPathList": [],
                               "text": "Submit",
@@ -1463,7 +1468,7 @@
                       "key": "xjezy59rwa",
                       "rightColumn": 64,
                       "widgetId": "lucdjq5710",
-                      "defaultTab": "Tab 1",
+                      "defaultTab": "Info",
                       "shouldShowTabs": true,
                       "tabsObj": {
                         "tab1": {
@@ -1534,7 +1539,12 @@
           "CreateCStatus",
           "CreateCUrl",
           "Create_Candidate",
+          "EditCEmail",
           "EditCName",
+          "EditCPhone",
+          "EditCRole",
+          "EditCStatus",
+          "EditCUrl",
           "FilePicker1",
           "FormButton1",
           "FormButton1Copy",
@@ -1542,12 +1552,7 @@
           "Icon1",
           "IconButton1",
           "Image2",
-          "Input1Copy",
-          "Input1CopyCopy",
-          "Input1CopyCopyCopy",
           "MainContainer",
-          "Select1",
-          "Select1Copy",
           "Select2",
           "Table1",
           "Tabs1",

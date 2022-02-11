@@ -21,22 +21,16 @@
         "command": "INSERT",
         "collection": "interviewers",
         "insert": {
-          "documents": "{{[{\"name\": Form1.data.Input5.name}]}}"
+          "documents": "{\"name\": Form1.data.Input5.value},{\"email\": Form1.data.Input1.value},{\"phone\": Form1.data.PhoneInput1.value}, {\"designation\": Form1.data.Input2.value}, {\"calendly\": Form1.data.Input3.value}, {\"rounds\": Form1.data.Input4.value}"
         }
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "formData.insert.documents"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "[{\"name\": Form1.data.Input5.name}]"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

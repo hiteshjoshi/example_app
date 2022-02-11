@@ -21,16 +21,24 @@
         "command": "INSERT",
         "collection": "roles",
         "insert": {
-          "documents": ""
+          "documents": "{\n  role:\"{{role_name.text}}\",\n  description:\"{{job_description.text}}\",\n  round:\"{{interview_round.selectedOptionValues}}\"\n}"
         }
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.insert.documents"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "interview_round.selectedOptionValues",
+      "job_description.text",
+      "role_name.text"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
