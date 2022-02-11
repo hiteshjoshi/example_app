@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1168,
+          "rightColumn": 1280,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -1293,6 +1293,7 @@
                             {
                               "resetFormOnClick": true,
                               "widgetName": "FormButton1",
+                              "onClick": "{{EditCandidate.run()}}",
                               "buttonColor": "#FBF4EB",
                               "displayName": "FormButton",
                               "iconSVG": "/static/media/icon.c8f649ed.svg",
@@ -1301,7 +1302,11 @@
                               "type": "FORM_BUTTON_WIDGET",
                               "hideCard": true,
                               "animateLoading": true,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
                               "leftColumn": 33,
                               "dynamicBindingPathList": [],
                               "text": "Submit",
