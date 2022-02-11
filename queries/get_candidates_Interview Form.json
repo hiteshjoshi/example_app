@@ -18,7 +18,8 @@
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "formData": {
-        "collection": "candidates"
+        "collection": "candidates",
+        "command": "FIND"
       }
     },
     "executeOnLoad": false,

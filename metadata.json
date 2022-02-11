@@ -20,12 +20,18 @@
     "Role Interviews": [
       "Table1",
       "Table2"
+    ],
+    "Candidate Manager": [
+      "Table1"
     ]
   },
   "unpublishedLayoutmongoEscapedWidgets": {
     "Role Interviews": [
       "Table1",
       "Table2"
+    ],
+    "Candidate Manager": [
+      "Table1"
     ]
   }
 }

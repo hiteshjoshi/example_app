@@ -178,7 +178,7 @@
                           "key": "options"
                         }
                       ],
-                      "options": "{{JSObject1.getRounds()}}",
+                      "options": "{{get_rounds.data.map(round => ({ value: round._id, label: round.name }))}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "ounmsw9fxw",
@@ -213,7 +213,7 @@
                           "key": "options"
                         }
                       ],
-                      "options": "{{JSObject1.getCandidatesForSelect()}}",
+                      "options": "{{get_candidates.data.map(round => ({ value: round._id, label: round.name }))}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "ounmsw9fxw",
@@ -303,7 +303,7 @@
           "feedback",
           "round"
         ],
-        "validOnPageLoadActions": true,
+        "validOnPageLoadActions": false,
         "id": "Interview Form",
         "deleted": false,
         "policies": [],

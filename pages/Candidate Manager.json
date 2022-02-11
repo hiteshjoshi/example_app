@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1160,
+          "rightColumn": 1168,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -61,15 +61,20 @@
                     {
                       "resetFormOnClick": true,
                       "widgetName": "FormButton1Copy",
+                      "onClick": "{{CreateCandidate.run(() => get_candidates.run(), () => {})}}",
                       "buttonColor": "#03b365",
                       "displayName": "FormButton",
                       "iconSVG": "/static/media/icon.c8f649ed.svg",
                       "topRow": 50,
-                      "bottomRow": 56,
+                      "bottomRow": 55,
                       "type": "FORM_BUTTON_WIDGET",
                       "hideCard": true,
                       "animateLoading": true,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
                       "text": "Submit",
@@ -84,6 +89,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "disabledWhenInvalid": true,
+                      "borderRadius": "ROUNDED",
                       "buttonVariant": "PRIMARY"
                     },
                     {
@@ -401,12 +407,16 @@
                       "widgetName": "Table1",
                       "defaultPageSize": 0,
                       "columnOrder": [
-                        "step",
-                        "task",
-                        "status",
-                        "action"
+                        "role",
+                        "phone",
+                        "name",
+                        "_id",
+                        "email",
+                        "url",
+                        "status"
                       ],
                       "isVisibleDownload": false,
+                      "dynamicPropertyPathList": [],
                       "displayName": "Table",
                       "iconSVG": "/static/media/icon.db8a9cbd.svg",
                       "topRow": 6,
@@ -421,30 +431,36 @@
                       "dynamicTriggerPathList": [],
                       "dynamicBindingPathList": [
                         {
-                          "key": "primaryColumns.step.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.task.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.status.computedValue"
                         },
                         {
-                          "key": "primaryColumns.action.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.action.buttonLabel"
-                        },
-                        {
                           "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.role.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.phone.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.name.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns._id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.email.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.url.computedValue"
                         }
                       ],
                       "leftColumn": 1,
                       "primaryColumns": {
-                        "step": {
-                          "index": 0,
+                        "appsmith_mongo_escape_id": {
+                          "index": 3,
                           "width": 150,
-                          "id": "step",
+                          "id": "_id",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
@@ -452,19 +468,17 @@
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
+                          "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "step",
-                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.step))}}",
-                          "buttonColor": "#03B365",
-                          "menuColor": "#03B365",
-                          "labelColor": "#FFFFFF",
+                          "label": "_id",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow._id))}}",
                           "cellBackground": "#FFFFFF"
                         },
-                        "task": {
-                          "index": 1,
+                        "role": {
+                          "index": 0,
                           "width": 150,
-                          "id": "task",
+                          "id": "role",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
@@ -472,13 +486,83 @@
                           "enableFilter": true,
                           "enableSort": true,
                           "isVisible": true,
+                          "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "task",
-                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.task))}}",
-                          "buttonColor": "#03B365",
-                          "menuColor": "#03B365",
-                          "labelColor": "#FFFFFF",
+                          "label": "role",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.role))}}",
+                          "cellBackground": "#FFFFFF"
+                        },
+                        "phone": {
+                          "index": 1,
+                          "width": 150,
+                          "id": "phone",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "phone",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.phone))}}",
+                          "cellBackground": "#FFFFFF"
+                        },
+                        "name": {
+                          "index": 2,
+                          "width": 150,
+                          "id": "name",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "name",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.name))}}",
+                          "cellBackground": "#FFFFFF"
+                        },
+                        "email": {
+                          "index": 4,
+                          "width": 150,
+                          "id": "email",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "email",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.email))}}",
+                          "cellBackground": "#FFFFFF"
+                        },
+                        "url": {
+                          "index": 5,
+                          "width": 150,
+                          "id": "url",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "url",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.url))}}",
                           "cellBackground": "#FFFFFF"
                         },
                         "status": {
@@ -500,29 +584,6 @@
                           "menuColor": "#03B365",
                           "labelColor": "#FFFFFF",
                           "cellBackground": "#FFFFFF"
-                        },
-                        "action": {
-                          "index": 3,
-                          "width": 150,
-                          "id": "action",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "button",
-                          "textSize": "PARAGRAPH",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isCellVisible": true,
-                          "isDisabled": false,
-                          "isDerived": false,
-                          "label": "action",
-                          "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
-                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.action))}}",
-                          "buttonColor": "#03B365",
-                          "menuColor": "#03B365",
-                          "labelColor": "#FFFFFF",
-                          "cellBackground": "#FFFFFF",
-                          "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Action'))}}"
                         }
                       },
                       "delimiter": ",",
@@ -970,7 +1031,11 @@
                               "dynamicTriggerPathList": [],
                               "resetOnSubmit": true,
                               "leftColumn": 0,
-                              "dynamicBindingPathList": [],
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "defaultText"
+                                }
+                              ],
                               "labelStyle": "",
                               "inputType": "TEXT",
                               "isDisabled": false,
@@ -985,7 +1050,7 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "iconAlign": "left",
-                              "defaultText": ""
+                              "defaultText": "{{Table1.selectedRow.email}}"
                             },
                             {
                               "widgetName": "Input1CopyCopy",

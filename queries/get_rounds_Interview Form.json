@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "Query2",
+    "name": "get_rounds",
     "datasource": {
       "pluginId": "mongo-plugin",
       "messages": [],
@@ -12,12 +12,18 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Candidate Manager",
+    "pageId": "Interview Form",
     "actionConfiguration": {
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "encodeParamsToggle": true
+      "encodeParamsToggle": true,
+      "formData": {
+        "collection": "rounds",
+        "command": "FIND"
+      }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
@@ -27,7 +33,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Candidate Manager_Query2",
+  "id": "Interview Form_get_rounds",
   "deleted": false,
-  "gitSyncId": "620648da6b4b1e154a3be216_62065ddc6b4b1e154a3be636"
+  "gitSyncId": "620648da6b4b1e154a3be216_62065d6e6b4b1e154a3be5b7"
 }

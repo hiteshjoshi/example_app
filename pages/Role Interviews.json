@@ -229,7 +229,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 34,
+                      "leftColumn": 33,
                       "dynamicBindingPathList": [],
                       "text": "Submit",
                       "key": "n78oanwukn",
@@ -262,7 +262,7 @@
                       "dynamicBindingPathList": [],
                       "text": "Reset",
                       "key": "n78oanwukn",
-                      "rightColumn": 31,
+                      "rightColumn": 32,
                       "isDefaultClickDisabled": true,
                       "widgetId": "tbz96twfvn",
                       "isVisible": true,
