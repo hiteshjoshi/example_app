@@ -26,37 +26,6 @@
           "leftColumn": 0,
           "children": [
             {
-              "widgetName": "Text1",
-              "displayName": "Text",
-              "iconSVG": "/static/media/icon.97c59b52.svg",
-              "topRow": 9,
-              "bottomRow": 13,
-              "parentRowSpace": 10,
-              "type": "TEXT_WIDGET",
-              "hideCard": false,
-              "animateLoading": true,
-              "parentColumnSpace": 12.5625,
-              "dynamicTriggerPathList": [],
-              "leftColumn": 16,
-              "dynamicBindingPathList": [],
-              "shouldTruncate": false,
-              "truncateButtonColor": "#FFC13D",
-              "text": "Interview Form",
-              "key": "zqhcqrye6o",
-              "rightColumn": 45,
-              "textAlign": "LEFT",
-              "widgetId": "dmgwvwlrbk",
-              "isVisible": true,
-              "fontStyle": "BOLD",
-              "textColor": "#231F20",
-              "shouldScroll": false,
-              "version": 1,
-              "parentId": "0",
-              "renderMode": "CANVAS",
-              "isLoading": false,
-              "fontSize": "HEADING1"
-            },
-            {
               "widgetName": "Form1",
               "backgroundColor": "white",
               "rightColumn": 33,
@@ -131,6 +100,7 @@
                     {
                       "resetFormOnClick": true,
                       "widgetName": "FormButton1",
+                      "onClick": "{{create_interview.run(() => showAlert('Interview Created','success'), () => {})}}",
                       "buttonColor": "#03B365",
                       "displayName": "FormButton",
                       "iconSVG": "/static/media/icon.c8f649ed.svg",
@@ -139,7 +109,13 @@
                       "type": "FORM_BUTTON_WIDGET",
                       "hideCard": true,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 46,
+                      "dynamicBindingPathList": [],
                       "text": "Submit",
                       "key": "j78kkgigxa",
                       "rightColumn": 62,
@@ -279,7 +255,7 @@
                       "defaultText": "Please provide the <b>feedback</b> here."
                     },
                     {
-                      "widgetName": "RichTextEditor1Copy",
+                      "widgetName": "additional_information",
                       "displayName": "Rich Text Editor",
                       "iconSVG": "/static/media/icon.b35e139c.svg",
                       "topRow": 45,
@@ -321,9 +297,8 @@
           "FormButton1",
           "FormButton2",
           "MainContainer",
-          "RichTextEditor1Copy",
-          "Text1",
           "Text2",
+          "additional_information",
           "candidate",
           "feedback",
           "round"

@@ -21,16 +21,25 @@
         "command": "INSERT",
         "collection": "interviews",
         "insert": {
-          "documents": "{ candid }"
+          "documents": "{ round: {{round.selectedOptionValue}}, candidate: {{candidate.selectedOptionValue}}, feedback: {{feedback.text}}, additional_information: {{additional_information.text}} }"
         }
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.insert.documents"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "additional_information.text",
+      "candidate.selectedOptionValue",
+      "feedback.text",
+      "round.selectedOptionValue"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

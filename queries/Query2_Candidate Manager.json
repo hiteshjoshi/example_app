@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "create_interviewer",
+    "name": "Query2",
     "datasource": {
       "pluginId": "mongo-plugin",
       "messages": [],
@@ -12,21 +12,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Interviewer Pool",
+    "pageId": "Candidate Manager",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "encodeParamsToggle": true,
-      "formData": {
-        "command": "INSERT",
-        "collection": "interviewers",
-        "insert": {
-          "documents": "[]"
-        }
-      }
+      "encodeParamsToggle": true
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
@@ -36,7 +27,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Interviewer Pool_create_interviewer",
+  "id": "Candidate Manager_Query2",
   "deleted": false,
-  "gitSyncId": "620648da6b4b1e154a3be216_620658026b4b1e154a3be3df"
+  "gitSyncId": "620648da6b4b1e154a3be216_62065ddc6b4b1e154a3be636"
 }

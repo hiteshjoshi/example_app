@@ -90,6 +90,7 @@
               "horizontalAlignment": "LEFT",
               "isVisibleSearch": true,
               "isVisiblePagination": false,
+              "primaryColumnId": "interviewer_name",
               "verticalAlignment": "CENTER",
               "columnSizeMap": {
                 "task": 245,
@@ -186,7 +187,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Table1.selectedRow.interviewer_name || Table1.}}'s Details",
+                      "text": "{{Table1.selectedRow.interviewer_name}}'s Details",
                       "key": "icqf9wdl6e",
                       "rightColumn": 62,
                       "textAlign": "CENTER",

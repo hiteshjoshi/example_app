@@ -19,7 +19,10 @@
       "encodeParamsToggle": true,
       "formData": {
         "collection": "interviewers",
-        "command": "FIND"
+        "command": "FIND",
+        "find": {
+          "query": ""
+        }
       }
     },
     "executeOnLoad": false,

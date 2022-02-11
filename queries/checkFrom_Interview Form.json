@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n\t\tconsole.log(\"FOkRM\", Form1.data)\n\t}",
+      "body": "() => {\n\t\tconsole.log(\"FsOkRkM\", round.selectedOptionValue)\n\t}",
       "jsArguments": [],
       "isAsync": false
     },
@@ -33,7 +33,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n\t\tconsole.log(\"FOkRM\", Form1.data)\n\t}"
+      "() => {\n\t\tconsole.log(\"FsOkRkM\", round.selectedOptionValue)\n\t}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
