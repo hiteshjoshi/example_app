@@ -8,12 +8,12 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1160,
+          "rightColumn": 1168,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1990,
+          "bottomRow": 1290,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -444,6 +444,9 @@
                         },
                         {
                           "key": "primaryColumns.action.buttonLabel"
+                        },
+                        {
+                          "key": "tableData"
                         }
                       ],
                       "leftColumn": 1,
@@ -539,26 +542,7 @@
                       "textSize": "PARAGRAPH",
                       "widgetId": "ope507z4wi",
                       "isVisibleFilters": false,
-                      "tableData": [
-                        {
-                          "step": "#1",
-                          "task": "Drop a table",
-                          "status": "✅",
-                          "action": ""
-                        },
-                        {
-                          "step": "#2",
-                          "task": "Create a query fetch_users with the Mock DB",
-                          "status": "--",
-                          "action": ""
-                        },
-                        {
-                          "step": "#3",
-                          "task": "Bind the query using => fetch_users.data",
-                          "status": "--",
-                          "action": ""
-                        }
-                      ],
+                      "tableData": "{{get_candidates.data}}",
                       "isVisible": true,
                       "label": "Data",
                       "searchKey": "",
@@ -652,7 +636,7 @@
               "borderWidth": "0",
               "key": "3ldqu7ejgl",
               "backgroundColor": "#FFFFFF",
-              "rightColumn": 34,
+              "rightColumn": 31,
               "widgetId": "pp5cnub3gb",
               "containerStyle": "card",
               "isVisible": true,
@@ -818,14 +802,16 @@
               "isCanvas": true,
               "displayName": "Container",
               "iconSVG": "/static/media/icon.1977dca3.svg",
-              "topRow": 110,
-              "bottomRow": 197,
+              "topRow": 25,
+              "bottomRow": 107,
               "parentRowSpace": 10,
               "type": "CONTAINER_WIDGET",
               "hideCard": false,
               "animateLoading": true,
               "parentColumnSpace": 17.9375,
-              "leftColumn": 0,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 31,
+              "dynamicBindingPathList": [],
               "children": [
                 {
                   "widgetName": "Canvas7",
@@ -958,7 +944,11 @@
                               "dynamicTriggerPathList": [],
                               "resetOnSubmit": true,
                               "leftColumn": 0,
-                              "dynamicBindingPathList": [],
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "defaultText"
+                                }
+                              ],
                               "labelStyle": "",
                               "inputType": "TEXT",
                               "isDisabled": false,
@@ -973,7 +963,7 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "iconAlign": "left",
-                              "defaultText": ""
+                              "defaultText": "{{Table1.selectedRow.name}}"
                             },
                             {
                               "widgetName": "Input1Copy",
@@ -1244,7 +1234,7 @@
                             {
                               "resetFormOnClick": true,
                               "widgetName": "FormButton1",
-                              "buttonColor": "#03b365",
+                              "buttonColor": "#FBF4EB",
                               "displayName": "FormButton",
                               "iconSVG": "/static/media/icon.c8f649ed.svg",
                               "topRow": 64,
@@ -1411,7 +1401,7 @@
                         }
                       ],
                       "key": "xjezy59rwa",
-                      "rightColumn": 27,
+                      "rightColumn": 64,
                       "widgetId": "lucdjq5710",
                       "defaultTab": "Tab 1",
                       "shouldShowTabs": true,
@@ -1444,7 +1434,7 @@
               "borderWidth": "0",
               "key": "jan7yj2jtr",
               "backgroundColor": "#FFFFFF",
-              "rightColumn": 34,
+              "rightColumn": 64,
               "widgetId": "3lxb19c73o",
               "containerStyle": "card",
               "isVisible": true,
@@ -1452,11 +1442,21 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "borderRadius": "0"
+              "borderRadius": "15"
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Candidate Manager_get_candidates",
+              "name": "get_candidates",
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "widgetNames": [
           "Canvas2",
           "Canvas3",
