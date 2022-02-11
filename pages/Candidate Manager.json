@@ -1017,7 +1017,7 @@
                               "defaultText": "{{Table1.selectedRow.name}}"
                             },
                             {
-                              "widgetName": "Input1Copy",
+                              "widgetName": "EditCEmail",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595.svg",
                               "topRow": 16,
@@ -1053,7 +1053,7 @@
                               "defaultText": "{{Table1.selectedRow.email}}"
                             },
                             {
-                              "widgetName": "Input1CopyCopy",
+                              "widgetName": "EditCPhone",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595.svg",
                               "topRow": 23,
@@ -1534,7 +1534,9 @@
           "CreateCStatus",
           "CreateCUrl",
           "Create_Candidate",
+          "EditCEmail",
           "EditCName",
+          "EditCPhone",
           "FilePicker1",
           "FormButton1",
           "FormButton1Copy",
@@ -1542,8 +1544,6 @@
           "Icon1",
           "IconButton1",
           "Image2",
-          "Input1Copy",
-          "Input1CopyCopy",
           "Input1CopyCopyCopy",
           "MainContainer",
           "Select1",
