@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1160,
+          "rightColumn": 1280,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -1161,11 +1161,16 @@
                               "hideCard": false,
                               "animateLoading": true,
                               "parentColumnSpace": 8.154296875,
-                              "dynamicTriggerPathList": [],
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onFilesSelected"
+                                }
+                              ],
                               "leftColumn": 0,
                               "dynamicBindingPathList": [],
                               "isDisabled": false,
                               "key": "ar6q14pm2s",
+                              "onFilesSelected": "{{upload_resume.run(() => showAlert('Resume upload success','success'), () => showAlert('Error uploading resume','error'))}}",
                               "isRequired": false,
                               "rightColumn": 21,
                               "isDefaultClickDisabled": true,

@@ -18,7 +18,7 @@
       "paginationType": "NONE",
       "path": "{{FilePicker1.files[0].name}}",
       "encodeParamsToggle": true,
-      "body": "{{FilePicker1.files[0].data}}",
+      "body": "{{FilePicker1.files[0]}}",
       "formData": {
         "list": {
           "where": {
@@ -55,7 +55,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "FilePicker1.files[0].data",
+      "FilePicker1.files[0]",
       "FilePicker1.files[0].name"
     ],
     "userSetOnLoad": false,
