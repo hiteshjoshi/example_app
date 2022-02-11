@@ -744,7 +744,7 @@
                           "textSize": "PARAGRAPH",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": false,
+                          "isVisible": true,
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
@@ -869,7 +869,8 @@
                         "task": 245,
                         "step": 62,
                         "status": 75,
-                        "description": 252
+                        "description": 252,
+                        "name": 231
                       }
                     },
                     {
